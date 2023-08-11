@@ -12,6 +12,6 @@ if __name__ == "__main__":
         else:
             dot = "s."
         print(f"{argc} argument{dot}")
-        for i in range(len(args))):
+        for i in range(len(args)):
             print(f"{i+1}: {args[i]}")
 args_counts()

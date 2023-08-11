@@ -6,10 +6,10 @@ if __name__ == "__main__":
     def args_counts():
         args = sys.argv[1:]
         argc = len(args)
-        res = 0
+        resultat = 0
 
         for i in range(argc):
-            res += int(args[i])
-        print(res)
+            resultat += int(args[i])
+        print(resultat)
 args_counts()
 
