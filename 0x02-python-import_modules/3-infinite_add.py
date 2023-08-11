@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    """addition of one or more numbers"""
     import sys
 
     def args_counts():
