@@ -28,9 +28,10 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, param):
+    def width(self, val):
         """set the width of the rectangle"""
-        self.__width = param
+        self._verify_integer("width", val, False)
+        self.__width = val
 
     @property
     def height(self):
@@ -38,9 +39,10 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self, param):
+    def height(self, val):
         """set the height of the rectangle."""
-        self.__height = param
+        self._verify_integer("height", val, False)
+        self.__height = val
 
     @property
     def x(self):
@@ -48,9 +50,10 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self, param):
+    def x(self, val):
         """set the x of the rectangle."""
-        self.__x = param
+        self. _verify_integer("x",val)
+        self.__x = val
 
     @property
     def y(self):
@@ -58,6 +61,18 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(self, param):
+    def y(self, val):
         """set the y of the rectangle."""
-        self.__y = param
+        self._verify_integer("y", val)
+        self.__y = val
+
+    def _verify_integer(self, name, val, eq=True):
+        """
+        verify the value of an integer if it's an integer and validate it
+        """
+        if type(val) != int:
+            raise TypeError("{} must be an integer".format(name))
+        if eq and val < 0:
+            raise ValueError("{} must be >= 0".format(name))
+        elif not eq and val <= 0:
+            raise ValueError("{} must be > 0".format(name))
