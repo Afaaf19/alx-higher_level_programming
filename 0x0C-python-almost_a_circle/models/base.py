@@ -2,7 +2,7 @@
 """
 model that contains a base class
 """
-
+from os import path
 
 class Base:
     """
