@@ -1,6 +1,6 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 """
-model that defines the Rectangle Class
+module defining the Rectangle class.
 """
 
 from models.base import Base
@@ -8,58 +8,56 @@ from models.base import Base
 
 class Rectangle(Base):
     """
-    Rectangle Class: subclass of Base
+    rectangle class, a subclass of Base.
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-        Constructor
+        initializes a Rectangle instance.
         """
         super().__init__(id)
 
-        self._width = width
-        self._height = height
-        self._x = x
-        self._y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
     def width(self):
-        """ width of the rectangle: getter"""
+        """get the width of the rectangle."""
         return self.__width
 
     @width.setter
-    def width(self, val):
-        """width of the rectangle: setter"""
-        self.__width = val
+    def width(self, param):
+        """set the width of the rectangle"""
+        self.__width = param
 
     @property
     def height(self):
-        """height of the rectangle: getter"""
+        """get the height of the rectangle."""
         return self.__height
 
     @height.setter
-    def height(self, val):
-        """height of the rectangle: setter"""
-        self.__height = val
+    def height(self, param):
+        """set the height of the rectangle."""
+        self.__height = param
 
     @property
     def x(self):
-        """x of the rectangle: getter"""
+        """get the x of the rectangle."""
         return self.__x
 
     @x.setter
-    def x(self, val):
-        """
-        x of the rectangle: setter
-        """
-        self.__x = val
+    def x(self, param):
+        """set the x of the rectangle."""
+        self.__x = param
 
     @property
     def y(self):
-        """y of the rectangle: getter"""
+        """get the y of the rectangle."""
         return self.__y
 
     @y.setter
-    def y(self, val):
-        """y of the rectangle: setter"""
-        self.__y = val
+    def y(self, param):
+        """set the y of the rectangle."""
+        self.__y = param
