@@ -52,7 +52,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, val):
         """set the x of the rectangle."""
-        self. _verify_integer("x",val)
+        self. _verify_integer("x", val)
         self.__x = val
 
     @property
