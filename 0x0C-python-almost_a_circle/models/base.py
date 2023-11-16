@@ -3,9 +3,10 @@
 model that contains a base class
 """
 
+
 class Base:
     """
-    Base class created in order to manage id attribute in all my future classes of this project
+    Base class created in order to manage id attribute in future classes"
     """
 
     __nb_objects = 0
