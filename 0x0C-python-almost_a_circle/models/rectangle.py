@@ -16,12 +16,7 @@ class Rectangle(Base):
         Constructor
         """
         super().__init__(id)
-        """
-        self._check_integer_parameter(width, 'width')
-        self._check_integer_parameter(height, 'height')
-        self._check_integer_parameter(x, 'x')
-        self._check_integer_parameter(y, 'y')
-        """
+
         self.__width = width
         self.__height = height
         self.__x = x
@@ -29,30 +24,22 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """
-        width of the rectangle: getter
-        """
+        """ width of the rectangle: getter"""
         return self.__width
 
     @width.setter
     def width(self, val):
-        """
-        width of the rectangle: setter
-        """
+        """width of the rectangle: setter"""
         self.__width = val
 
     @property
     def height(self):
-        """
-        height of the rectangle: getter
-        """
+        """height of the rectangle: getter"""
         return self.__height
 
     @height.setter
     def height(self, val):
-        """
-        height of the rectangle: setter
-        """
+        """height of the rectangle: setter"""
         self.__height = val
 
     @property
@@ -74,7 +61,5 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, val):
-        """
-        y of the rectangle: setter
-        """
+        """y of the rectangle: setter"""
         self.__y = val
