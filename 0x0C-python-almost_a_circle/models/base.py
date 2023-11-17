@@ -58,7 +58,7 @@ class Base:
         returns an instance with all attributes
         """
         from models.rectangle import Rectangle
-        from models.square import Rectangle
+        from models.square import Square
         if cls is Rectangle:
             inst = Rectangle(1, 1)
         elif cls is Square:
