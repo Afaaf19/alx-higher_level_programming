@@ -3,6 +3,9 @@
 model that contains a base class
 """
 from os import path
+import json
+from json import dumps, loads
+
 
 class Base:
     """
@@ -20,3 +23,12 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    @staticmethod
+    def to_json_string(list_dict):
+        """
+        returns the JSON string representation of list_dictionaries
+        """
+        if list_dict is None or len(list_dict) == 0:
+            return '[]'
+        return dumps(list_dict)
