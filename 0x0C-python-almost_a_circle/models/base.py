@@ -67,3 +67,17 @@ class Base:
             inst = None
         inst.update(**dictionary)
         return inst
+
+    @classmethod
+    def load_from_file(cls):
+        """
+         returns a list of instances
+        """
+        fname = cls.__name__ + '.json'
+        if not path.exists(fname):
+            return []
+
+        with open(fname, mode='r', encoding='utf-8') as file:
+            objs = cls.from_json_string(file.read())
+            inst = [cls.create(**elem) for elem in objs]
+            return inst
