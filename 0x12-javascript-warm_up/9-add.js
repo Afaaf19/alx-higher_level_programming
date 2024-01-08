@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-//D=S==ript that prints the addition of 2 integers
+// Sript that prints the addition of 2 integers
 
 function add (a, b) {
   return parseInt(a) + parseInt(b);
