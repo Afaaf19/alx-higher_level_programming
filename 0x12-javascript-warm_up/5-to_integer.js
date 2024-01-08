@@ -1,5 +1,5 @@
 #!/usr/bin/node
-//Script that prints My number: <first argument converted in integer>
+// Script that prints My number: <first argument converted in integer>
 
 const MyNum = parseInt(process.argv[2]);
 if (isNaN(MyNum)) {
